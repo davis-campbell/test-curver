@@ -1,0 +1,13 @@
+<h1>Welcome</h1>
+<p>This application curves test scores.</p>
+<p>At the moment, it can only parse .csv (comma separated values) files in the following format: <br /><br />
+  name,score<br />
+  name,score<br />
+  name,score<br />
+</p>
+<p>It will return another .csv file in the same format, but with multiple sets
+  of scores based on different ways of curving the test.</p>
+<form method=post enctype="multipart/form-data" action="scores"> File to upload: <input type=file name="upfile"><br>
+  <input type=submit value="Submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+</form>
